@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+</head>
+  <title>Dating Website Part 1</title>
+  <meta name="author" content="G. Kipp">
+  <meta name="description" content="assessment part 3">
+  <!--last modified 10/4/2015-->
+  <style>
+    .fieldset_style {
+      background:lightyellow;
+      border:10px solid yellow;
+      margin-bottom:10px;
+      width:720px}
+    label {
+      width:180px;
+      display:inline-block;
+      text-align:right;
+      text-align:top;
+      margin-bottom:5px}
+    .checkbox_label {width:auto}
+    label:hover {font-size:40px}
+    textarea {width:360px; height:50px}
+  </style>
+</head>
+<body>
+  <h1>Please Enter Your Details For Our Dating Website</h1>
+    <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+    method="post" enctype="multipart/form-data">
+      <fieldset class="fieldset_style"><!--face-->
+        <legend><b>Your Face</b></legend>
+          <b>
+          <label for="preview-input">Your image:</label>
+          <input type="file" name="preview" id="preview-input" required>
+          <br>
+          <label for="preview">Image preview:</label>
+          <img src="" id="preview" name="image">
+          </b>
+      </fieldset>
+
+      <fieldset class="fieldset_style"><!--general details-->
+        <legend><b>Your General Details</b></legend>
+          <b>
+          <!--name-->
+          <label for="name">Name:</label>
+          <input type="text" name="lastname" placeholder="Your full name" required>
+          <br>
+          <!--gender-->
+          <label for="gender">Gender:</label>
+          <input type="radio" name="gender" value="Male" required/>Male
+          <input type="radio" name="gender" value="Female" checked required>Female
+          <br>
+          <!--age-->
+          <label for="Age">Age:</label>
+          <input type="number" name="Age" value="18" required>
+          <br>
+          <!--dob-->
+          <label for="DOB">Date of birth:</label>
+          <input type="date">
+          <br>
+          <!--color-->
+          <label for="fav_color">Favorite Color:</label>
+          <input type="color">
+          <br>
+          <!--country-->
+          <label for="country">Which country:</label>
+          <select name="country">
+            <option value="dds">DerkaDerkaStan</option>
+            <option value="ufs">United Fictional States</option>
+            <option value="bg">Breat Grittain</option>
+            <option value="aes">The Amazing Empire of Smurfs</option>
+            <option value="bfe">Bum Fuck Egypt</option>
+            <option value="ar">Antarctica</option>
+          </select>
+          <br>
+          </b>
+      </fieldset>
+
+      <fieldset class="fieldset_style"><!--indicators-->
+        <legend><b>Your Indicators</b></legend>
+        <b>
+          <label for="height">Height:</label>
+          Short<input type="range" min="0" max="100">Tall
+          <br>
+          <label for="salary">Salary:</label>
+          Poor<input type="range" min="0" max="100">Rich
+        </b>
+      </fieldset>
+
+      <fieldset class="fieldset_style"><!--contact info-->
+        <legend><b>Your Contact Information</b></legend>
+        <b>
+          <label for="email">Email:</label>
+          <input type="email" name="email" placeholder="something@example.com" required>
+          <br>
+
+          <label for="Mobile">Mobile:</label>
+          <input type="tel" name="mobile" placeholder="(555) 555-5555">
+          <br>
+
+          <label for="Address">Address:</label>
+          <textarea name="address"></textarea>
+          <br>
+
+          <label for="Method">Method to contact you:</label>
+          <input class="checkbox_label" type="checkbox" name="method" value="Email">Email
+          <input class="checkbox_label" type="checkbox" name="method" value="Whatsapp">Whatsapp
+          <input class="checkbox_label" type="checkbox" name="method" value="In-app chat">In-app chat
+          <br>
+        </b>
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+
+</body>
+</html>
